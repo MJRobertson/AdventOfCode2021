@@ -102,6 +102,34 @@ namespace adventofcode.source
             return bigInt.ToString();
         }
 
+        public static string Part2_Good(string[] data)
+        {
+            int[] timers = data[0].Split(',').Select(x => int.Parse(x)).ToArray();
+
+            long[] map = new long[9];
+
+            foreach (int item in timers)
+            {
+                ++map[item];
+            }
+
+            for (int i = 0; i < 256; i++)
+            {
+                long[] newArr = new long[9];
+                for (int f = 1; f < 9; ++f)
+                {
+                    newArr[f - 1] = map[f];
+                }
+
+                newArr[6] += map[0];
+                newArr[8] += map[0];
+
+                map = newArr;
+            }
+
+            return map.Sum().ToString();
+        }
+
         static void SpawnFish(ref long number, int start)
         {
             ++number;
