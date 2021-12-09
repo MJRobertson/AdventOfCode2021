@@ -15,20 +15,6 @@ namespace adventofcode.source
 
         public static string Part1(string[] data)
         {
-            Dictionary<string, int> m_defaultNumberLink = new Dictionary<string, int>()
-            {
-                {"abcefg", 0},
-                {"cf", 1},
-                {"acdeg", 2},
-                {"acdfg", 3},
-                {"bcdf", 4},
-                {"abdfg", 5},
-                {"abdefg", 6},
-                {"acf", 7},
-                {"abcdefg", 8},
-                {"abcdfg", 9}
-            };
-
             Input[] inputs = data.Select(x => {
                 string[] split = x.Split('|');
                 return new Input{
@@ -107,7 +93,6 @@ namespace adventofcode.source
                 var calc = Ouput.Select((x, index) => Translation[x] * (int)Math.Pow(10, 3 - index));
                 total += calc.Sum();
             }
-
 
             return total.ToString();
         }
