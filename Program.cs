@@ -10,7 +10,7 @@ namespace adventofcode
         static void Main(string[] args)
         {
             string folder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string path = Path.Combine(folder, @"data/day11.txt");
+            string path = Path.Combine(folder, @"data/day12.txt");
             string[] lines = TextParser.ReadLines(path);
 
             //string Day1Part1Answer = Day1.Part1(lines);
@@ -34,8 +34,10 @@ namespace adventofcode
             //string Day10Part1Answer = Day10.Part1(lines);
             //string Day10Part2Answer = Day10.Part2(lines);
             //string Day11Part1Answer = Day11.Part1(lines);
-            string Day11Part2Answer = Day11.Part2(lines);
-            Console.WriteLine(Day11Part2Answer);
+            //string Day11Part2Answer = Day11.Part2(lines);
+            //string Day12Part1Answer = Day12.Part1(lines);
+            string Day12Part2Answer = Day12.Part2(lines);
+            Console.WriteLine(Day12Part2Answer);
             //Console.WriteLine(Day6Part2Answer);
         }
     }

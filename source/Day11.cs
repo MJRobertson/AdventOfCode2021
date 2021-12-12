@@ -26,7 +26,6 @@ namespace adventofcode.source
 
             for (int i = 0; i <100; ++i)
             {
-
                 Console.WriteLine("day " + i.ToString());
                 for (int ix = 0; ix < arr.Length; ++ix)
                 {
@@ -40,8 +39,6 @@ namespace adventofcode.source
 
                 IncreaseAll(ref arr);
                 Flash(ref arr, ref flashes);
-
-                
             }
 
             return flashes.ToString();
