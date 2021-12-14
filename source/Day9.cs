@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace adventofcode.source
@@ -27,7 +25,6 @@ namespace adventofcode.source
             {
                 for (int y = 0; y < arr[x].Length; ++y)
                 {
-
                     int? top = null, right = null, down = null, left = null;
 
                     int centre = arr[x][y];
